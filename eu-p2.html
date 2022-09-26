@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Platform-EU</title>
+    
+    <meta name="author" content="Vera Diaz">
+    <meta name="description" content="This is an example form for the MDR platform.">
+
+    <link rel="stylesheet" href=".\styles\style.css">
+
+  </head>
+  <body>
+    <nav class="topnav">
+      <div>
+        <logo class="flex-left">
+          <span class="text-md-blue1">Kikitos</span>
+          <span class="text-md-blue2">Platform</span>
+        </logo>
+      </div>
+      <div class="flex-mid"></div>
+      <div class="flex-right">
+        <a class="navbar-link" href="/profile">Profile</a>
+        <a class="navbar-link" href="/contact">Contact</a>
+      </div>
+    </nav>
+
+<div class="container">  
+    <form class="card" action="" method="post">
+        <h3>Person Responsible for Regulatory Compliance</h3>
+        <div class="col100 ">            
+                <div class="wd50">
+                    <label name="">Representative name</label>
+                    <input placeholder="Representative name" type="text" required>
+                    <label name="">Email</label>
+                    <input placeholder="Email" type="text" required>
+                    <label name="">Phone number</label>
+                    <input placeholder="Phone number" type="text" required>
+                    <label name="">Company Address (if different)</label>
+                    <input placeholder="Company Address1" type="text">
+                    <label name="">Company Address line 2</label>
+                    <input placeholder="Company Address2" type="text">
+                </div>
+                <div class="wd100">
+                    <label name="">Responsible for:</label><br>
+                    <label><input id="bxa" type="checkbox" value="">Conformity of the device(s)</label><br>
+                    <label><input id="bxb" type="checkbox" value="">Technical documentation and the EU declaration of conformity are prepared and updated</label><br>
+                    <label><input id="bxc" type="checkbox" value="">Post-market surveillance obligations are complied with</label><br>
+                    <label><input id="bxd" type="checkbox" value="">Reporting obligations are fulfilled</label><br>
+                </div>   
+        </div>       
+        <h3>Notified Body Information</h3>
+        <div class="wd100">
+            <div class="col50 colleft">
+                <fieldset id="nb-status">
+                    <label>Client and Notified Body Information:</label><br>
+                    <input type="radio" id="a" name="nb-status" value="Client has selected a notified body">
+                    <label for="a">Client has selected a notified body</label><br>
+                    <input type="radio" id="b" name="nb-status" value="Client requires help selecting a notified body">
+                    <label for="b">Client requires help selecting a notified body</label><br>
+                </fieldset>
+            </div>
+            <div class="col50 colright">    
+                <label>Client has the following:</label><br>
+                <label name=""><input type="checkbox" value="">ISO 13485 certified QMS</label><br>
+                <label name=""><input type="checkbox" value="">ISO 13485 (MDSAP) certified QMS</label><br>
+                <label name=""><input type="checkbox" value="">ISO 90001 certified QMS</label><br>
+                <label name=""><input type="checkbox" value="">other (e.g GMP) </label><br>
+                <label name=""><input type="checkbox" value="">No valid QMS certification </label><br>
+            </div>
+            <div class="wd70">    
+                <label name="">Desired conformity assessment route</label>
+                <select>
+                    <option value=" ">MDR Annex IX QMS and TF</option>
+                    <option value=" ">MDR Annex X Type Examination</option>
+                    <option value=" ">MDR Annex XI part A Production Quality Assurance</option>
+                    <option value=" ">MDR Annex XI part B Product Verification</option>
+                    <option value=" ">IVDR Annex IX QMS and TF</option>
+                    <option value=" ">IVDR Annex X Type Examination</option>
+                    <option value=" ">IVDR Annex XI, production QA</option>
+                </select>
+
+                <label name="">Type of review</label>
+                <select>
+                    <option value=" ">Initial</option>
+                    <option value=" ">Surveillance</option>
+                </select>
+
+                <label name="">Notified Body Name</label>
+                <input placeholder="NB name..." type="text">    
+            
+                <label name="">Quote Status:</label><br>
+                <input type="radio" id="nbquote1" name="nb_status" value="quote not requested">
+                <label for="nbquote1">quote not requested</label><br>
+                <input type="radio" id="nbquote2" name="nb_status" value="quote requested">
+                <label for="nbquote2">quote requested</label><br>
+                <input type="radio" id="nbquote3" name="nb_status" value="quote signed and approved">
+                <label for="nbquote3">quote signed and approved</label><br>
+                
+                <label name="">Quote Requested on:</label><br>
+                <input placeholder="YYYY-MM-DD" type="text">
+            </div>
+            
+        </div>
+        
+        <div class="wd70">
+            <h3>Sub-contractor and Affiliate Information</h3>
+            
+                <label name="">Representative name</label>
+                <input placeholder="Representative name" type="text" required autofocus>
+                <label name="">Company Address</label>
+                <input placeholder="Company Address1" type="text">
+                <label name="">Company Address line 2</label>
+                <input placeholder="Company Address2" type="text">
+                <label name="">Company Address line 3</label>
+                <input placeholder="Company Address3" type="text">
+                
+                <label name="">Responsible for:</label>
+                <select>
+                    <option value=" ">Outsourced manufacturing</option>
+                    <option value=" ">Outsourced service and support</option>
+                    <option value=" ">Supplier of critical components</option>
+                    <option value=" ">Supplier of non-critical components</option>
+                </select>
+                <label name="">Audit Status:</label>
+                <select>
+                    <option value=" ">Audited internally</option>
+                    <option value=" ">No audit completed</option>
+                    <option value=" ">Audit is planned before MDR assessment</option>
+                    <option value=" ">Client needs help auditing them</option>
+                </select>            
+        </div>
+        <div class="wd100">
+            <label name="">Describe in more detail acivity that they are involved in:</label>
+            <textarea placeholder="Insert text here ..." required></textarea>
+        </div>
+        <!--line-->
+        <div class="wd100"><hr class="gradient-line-bottom-padded">
+            <!--iternal and external message section-->
+                <div class="col50 colleft">
+                    <div class="wd50">
+                        <label>Client Follow up notes</label>
+                        <textarea id="txtoutmsg" name="txtoutmsg" placeholder="Insert text here ..." ></textarea>
+                    </div>
+                </div>
+                <div class="col50 colright">
+                    <div class="wd50">
+                        <label>Internal Follow up notes</label>
+                        <textarea id="txtinmsg" name="txtinmsg" placeholder="Insert text here ..." ></textarea>
+                    </div>
+                </div>
+                <!--buttons-->
+                <div class="col50 colleft">
+                    <button name="save-close" type="submit" id="save-close" onclick="self.close()">Save and Close</button>
+                </div>
+                <div class="col50 colright">
+                        <button name="save-submit" type="submit" id="save-submit" onclick="saveFile()">Next</button>
+                </div>
+            </div>
+    </form>
+</div>
+
+</body>
+</html>

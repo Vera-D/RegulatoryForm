@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Platform</title>
+    
+    <meta name="author" content="Vera Diaz">
+    <meta name="source" content="https://codepen.io/mrdogra007/pen/QQOawv">
+    <meta name="description" content="This is an example form for the MDR platform.">
+
+    <link rel="stylesheet" href=".\styles\style.css">
+    
+  </head>
+  <body>
+    <nav class="topnav">
+      <div>
+        <logo class="flex-left">
+          <span class="text-md-blue1">Kikitos</span>
+          <span class="text-md-blue2">Platform</span>
+        </logo>
+      </div>
+      <div class="flex-mid"></div>
+      <div class="flex-right">
+        <a class="navbar-link" href="/profile">Profile</a>
+        <a class="navbar-link" href="/contact">Contact</a>
+      </div>
+    </nav>
+<div class="container">  
+    <form class="card" action="" method="post">
+        <h3>Technical File</h3>
+                <!-- g1-->
+                <h3>Device Nomenclature</h3>
+                <p>Follow the guidance in the links as needed.</p>
+                <div class="wd100"> 
+                    <!--EUDAMED CODE-->
+                    <label name="">BSI Technical File guidance
+                        <a class="menu" href="https://www.bsigroup.com/globalassets/meddev/localfiles/en-gb/documents/bsi-md-mdr-best-practice-documentation-submissions-en-gb.pdf"> 
+                            <span>Best Practices Guideline</span></a>
+                    </label>
+                    <div id="output"></div>
+        <!--line-->
+        <div class="wd100"><hr class="gradient-line-bottom-padded">
+            <!--iternal and external message section-->
+                <div class="col50 colleft">
+                    <div class="wd50">
+                        <label>Client Follow up notes</label>
+                        <textarea id="txtoutmsg" name="txtoutmsg" placeholder="Insert text here ..." ></textarea>
+                    </div>
+                </div>
+                <div class="col50 colright">
+                    <div class="wd50">
+                        <label>Internal Follow up notes</label>
+                        <textarea id="txtinmsg" name="txtinmsg" placeholder="Insert text here ..." ></textarea>
+                    </div>
+                </div>
+                <!--buttons-->
+                <div class="col50 colleft">
+                    <button name="save-close" type="submit" id="save-close" onclick="self.close()">Save and Close</button>
+                </div>
+                <div class="col50 colright">
+                        <button name="save-submit" type="submit" id="save-submit" onclick="saveFile()">Next</button>
+                </div>
+            </div>
+            
+
+    </form>
+</div>
+</body>
+<script>
+// Converts your input data into an object:
+var convert = function(input) {
+  var output = {};
+  // iterate through each path in the input array:
+  input.forEach(function(path) {
+    var folders = path.split("\\"); // convert this path into an array of folder names
+    // "parent" serves as a marker in the output object pointing to the current folder
+    var parent = output; // the topmost folder will be a child of the output root
+    folders.forEach(function(f) {
+      parent[f] = parent[f] || {}; // add a folder object if there isn't one already
+      parent = parent[f]; // the next part of the path will be a child of this part
+    });
+  });
+  return (output);
+}
+
+// Draws nested lists for the folder structure
+var drawFolders = function(input) {
+  var output = "<ol>";
+  Object.keys(input).forEach(function(k) { 
+    output += "<li>" + k; // draw this folder
+    if (Object.keys(input[k]).length) {
+      output += drawFolders(input[k]); // recurse for child folders
+    }
+    output += "</li>";
+  });
+  output += "</ol>";
+  return output;
+}
+
+var input = [
+  "Device Description and Specifications including Variants and Accessories\\A1\\A2\\A3",
+  "Information to be supplied by the Manufacturer\\B\\B1\\B2",
+  "Design and Manufacturing Information\\C\\C1\\C2",
+  "General Safety and Performance Requirements\\D\\D1\\D2",
+  "Benefit-Risk Analysis and Risk Management\\E\\E1\\E2",
+  "Pre-clinical Information\\F\\F1\\F2",
+  "Clinical Evaluation, PMS and PMCF\\G\\G1\\G2",
+  "Information related to medicinal substances, animal/human tissue and substances absorbed by or locally disperesed",
+  "Sterilisation and Information related to re-usable surgical instruments",
+  "Declaration of Confomity",
+  "Specific information for Class III implantable devices, and Class IIb active devices intended to administer or remove medicinal substances as per Rule 12 to determine the need for CECP process"
+];
+document.getElementById("output").innerHTML = drawFolders(convert(input));    
+//source: https://stackoverflow.com/questions/50078606/display-the-folder-structure-in-bootstrap-or-html-page-if-i-give-the-folders-pat
+</script>
+</html>

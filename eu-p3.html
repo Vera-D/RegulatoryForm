@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Platform</title>
+    
+    <meta name="author" content="Vera Diaz">
+    <meta name="source" content="https://codepen.io/mrdogra007/pen/QQOawv">
+    <meta name="description" content="This is an example form for the MDR platform.">
+
+    <link rel="stylesheet" href=".\styles\style.css">
+    
+  </head>
+  <body>
+    <nav class="topnav">
+      <div>
+        <logo class="flex-left">
+          <span class="text-md-blue1">Kikitos</span>
+          <span class="text-md-blue2">Platform</span>
+        </logo>
+      </div>
+      <div class="flex-mid"></div>
+      <div class="flex-right">
+        <a class="navbar-link" href="/profile">Profile</a>
+        <a class="navbar-link" href="/contact">Contact</a>
+      </div>
+    </nav>
+
+<div class="container">  
+    <form class="card" action="" method="post">
+        <h3>Classification</h3>
+                <!-- g1-->
+                <h3>Device Nomenclature</h3>
+                <p>Follow the guidance in the links as needed.</p>
+                <div class="wd100"> 
+                    <!--EUDAMED CODE-->
+                    <label name="">EMDN code. Use 
+                        <a class="menu" href="https://ec.europa.eu/tools/eudamed/#/screen/nomenclatures"> 
+                            <span>EUDAMED</span></a>
+                            Devices Nomenclature Finder for the EMDN code
+                    </label>
+                    <!--EMDN CODE-->
+                    <input placeholder="Enter EUDAMED code..." type="text" >
+                    <label name="">EMDN description</label>
+                    <input placeholder="Use the EUDAMED device nomenclature finder." type="text" >
+
+                    <label name="">MDA/MDN</label>
+                    <input placeholder="1 code per device, if more than one applies then select the one that is the highest in the list." type="text">
+                    
+                    <label name="">MDS</label>
+                    <input placeholder="0 to several per device, assign all codes that apply. Select after MDN/MDA code is assigned." type="text" >
+                    
+                    <label name="">MDT</label>
+                    <input placeholder="1 to several per device. Assign the code that describes the production technologies or processes. Select after MDN/MDA code." type="text" >
+                    
+                </div>
+        <div class="wd100"><hr class="gradient-line-bottom-padded">
+        <h3>Add dynamic classification table</h3>                
+            <!--notes section-->
+        <div class="wd100"><hr class="gradient-line-bottom-padded">
+            <div class="col50 colleft">
+                <div class="wd50">
+                    <label name="">Client Follow up notes</label>
+                    <textarea placeholder="Insert text here ..." required></textarea>
+                </div>
+            </div>
+            <div class="col50 colright">
+                <div class="wd50">
+                    <label name="">Internal Follow up notes</label>
+                    <textarea placeholder="Insert text here ..." required></textarea>
+                </div>
+            </div>
+            <div class="col50 colleft">
+                <button name="save-submit" type="submit" id="" data-submit="...Sending">Save and Close</button>
+            </div>
+            <div class="col50 colright">
+                <button name="save-submit" type="submit" id="" data-submit="...Sending"><a href="/p3">Next</a></button>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>

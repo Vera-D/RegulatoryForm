@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Platform</title>
+    
+    <meta name="author" content="Vera Diaz">
+    <meta name="source" content="https://codepen.io/mrdogra007/pen/QQOawv">
+    <meta name="description" content="This is an example form for the FDA module in the platform.">
+
+    <link rel="stylesheet" href=".\styles\style.css">
+    
+   
+  </head>
+  <body>
+    <nav class="topnav">
+      <div>
+        <logo class="flex-left">
+          <span class="text-md-blue1">Kikitos</span>
+          <span class="text-md-blue2">Platform</span>
+        </logo>
+      </div>
+      <div class="flex-mid"></div>
+      <div class="flex-right">
+        <a class="navbar-link" href="/profile">Profile</a>
+        <a class="navbar-link" href="/contact">Contact Us</a>
+      </div>
+    </nav>
+
+<div class="container">  
+    <form class="card" action="" method="post">
+      <h3>US Pre-market form</h3>
+      <div class="col100 ">            
+        <div class="wd70">
+            <label name="">Application Type:</label>
+            <select>
+                <option value=" ">Special</option>
+                <option value=" ">Traditional</option>
+                <option value=" ">Abbreviated</option>
+            </select>
+        </div>   
+      </div>
+      <div class="col100 ">            
+          <h3>Special 510(k) screening questions:</h3>
+          <p>If the answer is no to any of the questions below, the device will not likely qualify for a special 510(k) and you should advice the client to submit a traditional 510(k).</p>
+        <div class="wd70"> 
+            <label name=""></label>
+            <input placeholder="Enter text..." type="text" required>
+        </div>   
+        <div class="wd100">
+          <label name="special-description">Describe the changes briefly to perform an assessment:</label>
+          <textarea placeholder="Insert text here ..." required></textarea>
+        </div>
+        <div class="wd70">
+        <!--Q1-->
+          <p>Is it a change to the manufacturer’s own device?</p>
+            <label name=""></label>
+            <input placeholder="Enter text..." type="text" required>
+        </div>
+        <div class="wd70">
+          <!--Q2-->
+            <p>Are performance data needed to evaluate the change?</p>
+              <label name=""></label>
+              <input placeholder="Enter text..." type="text" required>
+          </div> 
+          <div class="wd70">
+            <!--Q3-->
+              <p>Is there a well-established method to evaluate the change?</p>
+                <label name=""></label>
+                <input placeholder="Enter text..." type="text" required>
+            </div>
+          <div class="wd70">
+            <!--Q4-->
+              <p>Can the data be reviewed in a summary or risk analysis form (example below)? </p>
+                <label name=""></label>
+                <input placeholder="Enter text..." type="text" required>
+            </div>            
+      </div>
+      <!--Table -->
+      <table>
+        <tr>
+          <th>Device Change</th>
+          <th>Risks</th>
+          <th>VnV Method(s)</th>
+          <th>Acceptance Criteria</th>
+          <th>Summary of Results</th>
+        </tr>
+        <tr>
+          <td>Removal of ring</td>
+          <td>Damaged tissue</td>
+          <td>
+            <ul>
+              <li>Damage to device during insertion with bougiecauses delay in patient treatment</li>
+              <li>Penetration test performed with bougie</li>
+              <li>(Protocol and acceptance criteria same as Kxxxxxx without any deviations)</li>
+            </ul>
+          </td>
+          <td>Breaking load shall be greater than 9N</td>
+          <td>
+            <ul>
+              <li>Pass(12/12)</li>
+              <li>Mean: 15.0</li>
+              <li>Standard deviation:0.39Range:14.4-15.6</li>
+          </td>
+        </tr>
+        <tr>
+          <td>Shape change</td>
+          <td>
+            <ul>
+              <li>Damaged tissue</li>
+              <li>Damage to device causes delay in patient treatment</li>
+            </ul>
+            </td>
+          <td>
+            <ul>
+              <li>Simulated insertion test with bougie</li>
+              <li>Bending test with bougie</li>
+              <p>(Protocol and acceptance criteria same as Kxxxxxx without any deviations</p>
+            </ul>
+          </td>
+          <td>
+            For both tests, visual inspection shall demonstrate that the device can be inserted without damage.
+          </td>
+          <td>
+            Pass(20/20) for both tests
+          </td>
+        </tr>
+      </table>
+        <!--notes section-->
+        <div class="wd100"><hr class="gradient-line-bottom-padded">
+          <div class="col50 colleft">
+              <div class="wd50">
+                  <label name="">Client Follow up notes</label>
+                  <textarea placeholder="Insert text here ..." required></textarea>
+              </div>
+          </div>
+          <div class="col50 colright">
+              <div class="wd50">
+                  <label name="">Internal Follow up notes</label>
+                  <textarea placeholder="Insert text here ..." required></textarea>
+              </div>
+          </div>
+          <div class="col50 colleft">
+              <button name="save-submit" type="submit" id="" data-submit="...Sending">Save and Close</button>
+          </div>
+          <div class="col50 colright">
+              <button name="save-submit" type="submit" id="" data-submit="...Sending"><a href="/p3">Next</a></button>
+          </div>
+      </div>   
+    </form>
+</div>
+
+<p style="font-style: italic; color: #2196f3; font-size: 18px; text-align: center; margin-top: 50px; margin-bottom: 20px;"></p>
+
+</body>
+</html>

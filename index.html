@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Platform-Main</title>
+    
+    <meta name="author" content="Vera Diaz">
+    <meta name="source" content="https://codepen.io/mrdogra007/pen/QQOawv">
+    <meta name="description" content="This is an example form for the FDA module in the platform.">
+
+    <link rel="stylesheet" href=".\styles\style.css">
+       
+  </head>
+  <body>
+    <nav class="topnav">
+      <div>
+        <logo class="flex-left">
+          <span class="text-md-blue1">Kikitos</span>
+          <span class="text-md-blue2">Platform</span>
+        </logo>
+      </div>
+      <div class="flex-mid"></div>
+      <div class="flex-right">
+        <a class="navbar-link" href="/profile">Profile</a>
+        <a class="navbar-link" href="/contact">Contact Us</a>
+      </div>
+    </nav>
+
+<div class="container">  
+    <form class="card" action="" method="post">
+        <!-- company info-->
+        <h3>Client Information</h3>
+        <div class="wd100">
+            <div class="col50 colleft">
+                <div class="wd50">
+                    <label>Company Name</label>
+                    <input id="txtCompanyName" placeholder="Company Name" type="text" >
+                    
+                    <label>Primary Contact</label>
+                    <input id="txtPrimaryContact" placeholder="Primary Contact" type="text" >
+                    
+                    <label>Phone +358 044 123 4567</label>
+                    <input id="txtPhone" placeholder="Phone" type="tel" pattern="[0-9]{3} [0-9]{3} [0-9]{3} [0-9]{4}" >
+                    
+                    <label>Email</label>
+                    <input id="txtEmail" placeholder="Email" type="email">
+                </div>
+            </div>
+                <div class="col50 colright">
+                    <div class="wd50">
+                        <label>Street Address</label>
+                        <input id="txtAddress1" placeholder="Address1" type="text" >
+                    
+                        <label>City and State or Municipality </label>
+                        <input id="txtAddress2" placeholder="Address2" type="text" >
+                    
+                        <label>Country and Zip Code </label>
+                        <input id="txtAddress3" placeholder="Address3" type="text" >
+                    </div>
+                </div>                                
+            </div>
+        <!-- Company info continued-->
+        <div class="wd100">
+            <p>Economic Operator Type in EU:</p>
+            <label><input id="bxManufacturer" type="checkbox" value="">Manufacturer</label><br>
+            <label><input id="bxImporter" type="checkbox" value="">Importer</label><br>
+            <label><input id="bxDistributor" type="checkbox" value="">Distributor</label><br>
+            <label><input id="bxAR" type="checkbox" value="">Authorized Representative</label><br>
+            <label><input id="bxHI" type="checkbox" value="">Health Institution</label>
+        </div>   
+        <div class="wd70">
+            <p>Target Market:</p>
+            <label><input id="bxEU" type="checkbox" value="">EU</label><br>
+            <label><input id="bxUS" type="checkbox" value="">US</label><br>
+            <label><input id="bxJP" type="checkbox" value="">Japan</label><br>
+        </div>
+        <!--line-->
+        <div class="wd100"><hr class="gradient-line-not-padded"></div>            
+        <h3>Device Information</h3>
+        <div class="col50 colleft">
+            <label name="">Device Trade Name</label>
+                <input placeholder="Device Trade Name" type="text"  autofocus>
+            <label name="">Model</label>
+                <input placeholder="Model" type="text"  autofocus>                  
+            <label name="">Version</label>
+                <input placeholder="Version" type="text"  autofocus>                    
+        </div>
+        <div class="wd100">
+        <div class="col50 colleft">
+            <div class="wd50">
+                <fieldset id="g-udi">
+                    <label name="">Client has generated a UDI</label><br>
+                    <input type="radio" id="yes" name="g-udi" value="yes">
+                    <label for="yes">yes</label><br>
+                    <input type="radio" id="no" name="g-udi" value="no">
+                    <label for="no">no</label><br>
+                </fieldset>
+            </div>
+        </div>
+           
+            
+        <div class="col50 colright">
+            <div class="wd50">
+                <fieldset id="g-udi">
+                    <label name="">Client has registered device in EUDAMED</label><br>
+                    <input type="radio" id="yes" name="g-eudamed" value="yes">
+                    <label for="yes">yes</label><br>
+                    <input type="radio" id="no" name="g-eudamed" value="no">
+                    <label for="no">no</label><br>
+                </fieldset>        
+            </div>
+        </div>
+        <div class="wd70">
+            <label name="">Basic UDI-DI</label>
+            <p>This is a unique numeric or alphanumeric code, specific to a model/variation/version.</p>
+            <input placeholder="Device UDI-DI" type="text" >                        
+        </div>
+        <div class="wd70">
+            <label name="">Basic UDI-PI</label>
+            <p>The different types of UDI-PIs include the serial number, lot number, software identification, manufacturing and/or expiry date.</p>
+            <input placeholder="Device UDI-PI" type="text" >                        
+        </div> 
+        <div class="wd100">
+            <div class="col80">
+                <label name="">CE-mark history</label><br>
+                <input type="radio" id="yes" name="g-current" value="yes">
+                <label for="yes">CE marked under MDD before 26 May 2021 and in new class</label><br>
+                <input type="radio" id="no" name="g-current" value="no">
+                <label for="no">CE marked under MDD before 26 May 2021 and in same class</label><br>
+                <input type="radio" id="no" name="g-current" value="no">
+                <label for="no">Legacy Device</label><br>
+                <input type="radio" id="no" name="g-current" value="no">
+                <label for="no">New device, not yet CE marked</label><br>                
+            </div>
+        </div>            
+    </div>  
+    <div class="wd100">
+        <label name="">Intended Use</label>
+        <textarea placeholder="Insert text here of the general purpose of the device or its function" ></textarea>
+    
+        <label name="">Indications for Use</label>
+        <textarea placeholder="Insert text here a description of the disease or condition the device will diagnose, treat, prevent cure, or mitigate. 
+            Describe also the patient population..." ></textarea>
+        <label name="">Device Description</label>
+        <textarea placeholder="Insert text here ..." ></textarea>
+    </div>
+    <h3>Intended User(s)</h3>
+    <div class="wd100 question-box">
+        <div class="col50 colleft">
+            <label><strong>Professional User(s)</strong></label><br>
+            <label name=""><input type="checkbox" value=""> Dentist</label>
+            <label name=""><input type="checkbox" value=""> Cardiologist</label><br>
+            <label name=""><input type="checkbox" value=""> Neurologist</label>
+            <label name=""><input type="checkbox" value=""> Clinician</label><br>
+            <label name=""><input type="checkbox" value=""> Physician</label>
+            <label name=""><input type="checkbox" value=""> Nurse</label><br>
+            <label name=""><input type="checkbox" value=""> Administrators</label>
+            <label name=""><input type="checkbox" value=""> Medical Assistant</label><br>
+            <label name=""><input type="checkbox" value=""> Technicians trained by Manufacturer</label>
+        </div>
+        <div class="col50 colright">
+            <label><strong>Non-professional User(s)</strong></label><br>
+            <label name=""><input type="checkbox" value=""> Pediatric Patient</label>
+            <label name=""><input type="checkbox" value=""> Adult Patient</label>
+            <label name=""><input type="checkbox" value=""> Caregiver</label>
+        </div>
+    </div>
+    
+    <!--P3 of form-->
+    <h3>Device Alternatives, Variants and Previous Generation</h3>
+        <div class="wd100 question-box">        
+            <div class="col50 colleft">
+                <label name=""><strong>Device Alternatives</strong></label>
+                <textarea placeholder="Insert text here ..." ></textarea>               
+            </div>
+            <div class="col50 colright">
+                <fieldset id="g1">
+                    <label name="">Classify together or seperate:</label><br>
+                    <input type="radio" id="yes" name="g1" value="yes">
+                    <label for="yes">together</label><br>
+                    <input type="radio" id="no" name="g1" value="no">
+                    <label for="no">classification already completed</label><br>
+                    <input type="radio" id="no" name="g1" value="no">
+                    <label for="no">classify seperately</label><br>
+                </fieldset>
+                </div>
+                                     
+            <div class="col80">                    
+                <label>CE-mark history</label><br>
+                <fieldset id="g2">
+                    <input type="radio" id="yes" name="g2" value="yes">
+                    <label for="yes">CE marked under MDD before 26 May 2021 and in new class</label><br>
+                    <input type="radio" id="no" name="g2" value="no">
+                    <label for="no">CE marked under MDD before 26 May 2021 and in same class</label><br>
+                    <input type="radio" id="no" name="g2" value="no">
+                    <label for="no">Legacy Device</label><br>
+                    <input type="radio" id="no" name="g2" value="no">
+                    <label for="no">New device, not yet CE marked</label><br>
+                </fieldset>                    
+            </div>
+        </div>
+        <br>
+        <!-- variants section-->
+        <div class="wd100 question-box">    
+            <div class="col50 colleft">
+                <label name=""><strong>Device Variants</strong></label>
+                <textarea placeholder="Insert text here ..." ></textarea>
+            </div>
+            <div class="col80 colright">                                   
+                <label name="">Classify together or seperate:</label><br>
+                <input type="radio" id="yes" name="g3" value="yes">
+                <label for="yes">together</label><br>
+                <input type="radio" id="no" name="g3" value="no">
+                <label for="no">classification already completed</label><br>
+                <input type="radio" id="no" name="g3" value="no">
+                <label for="no">classify seperately</label><br>
+            </div>
+            <br>
+            <div class="col80">
+                <label name="">CE-mark history</label><br>
+                <input type="radio" id="yes" name="g4" value="yes">
+                <label for="yes">CE marked under MDD before 26 May 2021 and in new class</label><br>
+                <input type="radio" id="no" name="g4" value="no">
+                <label for="no">CE marked under MDD before 26 May 2021 and in same class</label><br>
+                <input type="radio" id="no" name="g4" value="no">
+                <label for="no">Legacy Device</label><br>
+                <input type="radio" id="no" name="g4" value="no">
+                <label for="no">New device, not yet CE marked</label><br>                
+            </div>                
+        </div>
+        <!--reference to previous generation or similar devices-->
+        <div class="wd100 question-box">    
+            <div class="col50 colleft">
+                <label name=""><strong>Previous Generation(s)</strong></label>
+                <textarea placeholder="Insert text here ..." ></textarea>
+            </div>
+            <div class="wd100">
+                <div class="col80">
+                    <label name="">CE-mark History</label><br>
+                    <input type="radio" id="yes" name="g5" value="yes">
+                    <label for="yes">CE marked under MDD before 26 May 2021 and in new class</label><br>
+                    <input type="radio" id="no" name="g5" value="no">
+                    <label for="no">CE marked under MDD before 26 May 2021 and in same class</label><br>
+                    <input type="radio" id="no" name="g5" value="no">
+                    <label for="no">Legacy Device</label><br>
+                    <input type="radio" id="no" name="g5" value="no">
+                    <label for="no">New device was not CE marked</label><br>                
+                </div>
+            </div>          
+        </div>            
+        <!--line-->
+        <div class="wd100"><hr class="gradient-line-bottom-padded">
+            <!--iternal and external message section-->
+                <div class="col50 colleft">
+                    <div class="wd50">
+                        <label>Client Follow up notes</label>
+                        <textarea id="txtoutmsg" name="txtoutmsg" placeholder="Insert text here ..." ></textarea>
+                    </div>
+                </div>
+                <div class="col50 colright">
+                    <div class="wd50">
+                        <label>Internal Follow up notes</label>
+                        <textarea id="txtinmsg" name="txtinmsg" placeholder="Insert text here ..." ></textarea>
+                    </div>
+                </div>
+                <!--buttons-->
+                <div class="col50 colleft">
+                    <button name="save-close" type="submit" id="save-close" onclick="self.close()">Save and Close</button>
+                </div>
+                <div class="col50 colright">
+                        <button name="save-submit" type="submit" id="save-submit" onclick="saveFile()">Next</button>
+                </div>
+            </div>
+    </form>
+</div>
+</body>
+
+<script>
+/* java script to save file ToDo: Move to seperate file*/
+let saveFile = () => {
+        // Date information for log
+        var currentDate = new Date();
+        var cDay = currentDate.getDate()
+        var cMonth = currentDate.getMonth() + 1
+        var cYear = currentDate.getFullYear()
+        var hours = currentDate.getHours()
+        var minutes = currentDate.getMinutes()
+        
+        // Get the data from each element on the form.
+    	const now = cDay + "/" + cMonth + "/" + cYear + " " + hours + ":" + minutes;
+        const company = document.getElementById('txtCompanyName');
+        const primary = document.getElementById('txtPrimaryContact');
+        const phone = document.getElementById('txtPhone');
+        const email = document.getElementById('txtEmail');
+        const clientmsg = document.getElementById('txtoutmsg');
+        const internalmsg = document.getElementById('txtinmsg');
+        
+        // This variable stores all the data.
+        let data =
+            'Time: ' + now + '\n' + 
+            'Company Name: ' + company.value + '\n' + 
+            'Primary Contact: ' + primary.value + '\n' + 
+            'Phone: ' + phone.value + '\n' + 
+            'Email: ' + email.value + '\n' + 
+            'Client Message: ' + clientmsg.value + '\n' +
+            'Internal Message: ' + internalmsg.value ;
+        
+        // Convert the text to BLOB.
+        const textToBLOB = new Blob([data], { type: 'text/plain' });
+        const sFileName = cYear + "_" + cMonth + "_" + cDay + "_" + hours+"_"+minutes+'_p1_FormData.txt';	   // The file to save the data.
+
+        let newLink = document.createElement("a");
+        newLink.download = sFileName;
+
+        if (window.webkitURL != null) {
+            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+        }
+        else {
+            newLink.href = window.URL.createObjectURL(textToBLOB);
+            newLink.style.display = "none";
+            document.body.appendChild(newLink);
+        }
+
+        newLink.click(); 
+    }
+</script>
+</html>
